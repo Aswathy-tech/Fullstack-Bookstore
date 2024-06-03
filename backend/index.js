@@ -6,12 +6,11 @@ import cors from 'cors';
 const app = express();
 app.use(express.json());
 
- app.use(cors(
+app.use(cors({
   origin: ["https://fullstack-bookstore-frontend.vercel.app"],
-  methods: ["POST", "GET","PUT","DELETE","PATCH"],
+  methods: ["POST", "GET", "PUT", "DELETE", "PATCH"],
   credentials: true
-  
- ));
+}));
 
 
 app.get('/', (request, response) => {
