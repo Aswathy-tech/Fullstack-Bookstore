@@ -13,7 +13,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`http://localhost:3000/books/${id}`)
+      .delete(`https://deploy-fullstack-bookstore-api.vercel.app/books/${id}`)
       .then(() => {
         setLoading(false);
         alert('Book Deleted successfully');
