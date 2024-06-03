@@ -8,7 +8,7 @@ app.use(express.json());
 
  app.use(cors(
   origin: ["https://fullstack-bookstore-frontend.vercel.app"],
-  methods: ["POST", "GET"],
+  methods: ["POST", "GET","PUT","DELETE","PATCH"],
   credentials: true
   
  ));
@@ -22,7 +22,7 @@ app.get('/', (request, response) => {
   app.use('/books', booksRoute);
   
   mongoose
-    .connect(mongoDBURL)
+    .connect('mongodb+srv://root:root4@bookstore-mern.av1mpo8.mongodb.net/?retryWrites=true&w=majority')
     .then(() => {
       console.log('App connected to database');
       app.listen(3000, () => {
