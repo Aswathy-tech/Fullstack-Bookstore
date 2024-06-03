@@ -1,5 +1,4 @@
 import express from "express";
-import { PORT,mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import booksRoute from './router/booksRoute.js';
 import cors from 'cors';
@@ -8,7 +7,7 @@ const app = express();
 app.use(express.json());
 
  app.use(cors(
-  origin: [""],
+  origin: ["https://fullstack-bookstore-frontend.vercel.app"],
   methods: ["POST", "GET"],
   credentials: true
   
@@ -26,8 +25,8 @@ app.get('/', (request, response) => {
     .connect(mongoDBURL)
     .then(() => {
       console.log('App connected to database');
-      app.listen(PORT, () => {
-        console.log(`App is listening to port: ${PORT}`);
+      app.listen(3000, () => {
+        console.log(`App is listening to port: 3000`);
       });
     })
     .catch((error) => {
