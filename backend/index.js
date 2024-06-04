@@ -32,4 +32,4 @@ app.get('/', (request, response) => {
     .catch((error) => {
       console.log(error);
     });
-  module.exports = app; 
+export default app;
