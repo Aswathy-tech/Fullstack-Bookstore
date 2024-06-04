@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('https://deploy-fullstack-bookstore-api.vercel.app/api')
+      .get('https://deploy-fullstack-bookstore-api.vercel.app/books')
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
