@@ -20,7 +20,7 @@ const CreateBooks = () => {
     };
     setLoading(true);
     axios
-      .post('https://deploy-fullstack-bookstore-api.vercel.app/api', data)
+      .post('https://deploy-fullstack-bookstore-api.vercel.app/books', data)
       .then(() => {
         setLoading(false);
         alert('Book Created successfully');
