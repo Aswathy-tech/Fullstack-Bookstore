@@ -28,6 +28,7 @@ app.get('/', (request, response) => {
         console.log(`App is listening to port: 3000`);
       });
     })
+    module.exports = app; 
     .catch((error) => {
       console.log(error);
     });
