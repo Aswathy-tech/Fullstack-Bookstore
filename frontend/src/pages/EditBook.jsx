@@ -16,7 +16,7 @@ const EditBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`https://deploy-fullstack-bookstore-api.vercel.app/books/${id}`)
+    axios.get(`https://deploy-fullstack-bookstore-api.vercel.app/api/${id}`)
     .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear)
