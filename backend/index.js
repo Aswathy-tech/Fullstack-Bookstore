@@ -18,7 +18,7 @@ app.get('/', (request, response) => {
     return response.status(234).send('Welcome To MERN Stack Tutorial');
   });
   
-  app.use('/api', booksRoute);
+  app.use('/books', booksRoute);
   
   mongoose
     .connect('mongodb+srv://root:root4@bookstore-mern.av1mpo8.mongodb.net/?retryWrites=true&w=majority')
