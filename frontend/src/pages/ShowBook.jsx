@@ -12,7 +12,7 @@ const ShowBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://deploy-fullstack-bookstore-api.vercel.app/books/${id}`)
+      .get(`https://fullstack-bookstore-aswathy.vercel.app/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
