@@ -16,7 +16,7 @@ const EditBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.put(`https://fullstack-bookstore-aswathy.vercel.app/books/${id}`)
+    axios.get(`https://fullstack-bookstore-aswathy.vercel.app/books/${id}`)
     .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear)
@@ -37,7 +37,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:3000/books/${id}`, data)
+      .put(`https://fullstack-bookstore-aswathy.vercel.app/books/${id}`, data)
       .then(() => {
         setLoading(false);
         alert('Book Edited successfully');
